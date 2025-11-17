@@ -1,5 +1,0 @@
-[build]
-  publish = "public"  # Si tienes archivos estáticos que quieres publicar, puedes cambiar este valor.
-
-[build.environment]
-  PYTHON_VERSION = "3.12.6"
