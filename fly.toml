@@ -1,0 +1,12 @@
+# fly.toml
+app = "nombre-de-tu-app"
+
+[build]
+  dockerfile = "Dockerfile"  # Este es el archivo Dockerfile que usaremos
+
+[env]
+  # Si tienes variables de entorno como la URL de la base de datos, puedes configurarlas aquí
+  DATABASE_URL = "mysql://root:root@localhost/estructuraV1"  # Cambia esto por tu URI de conexión
+
+[experimental]
+  allowed_public_ports = [5000]  # El puerto donde la aplicación Flask estará disponible
