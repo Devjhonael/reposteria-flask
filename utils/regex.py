@@ -1,0 +1,1 @@
+patron_nombre=r'^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$'

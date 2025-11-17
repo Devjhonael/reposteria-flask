@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "0c4e7f57-a87c-45d5-b690-a99cad60adcf",
+		"name": "Api_reposteria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11297553"
+	},
+	"item": [
+		{
+			"name": "ingrediente",
+			"item": [
+				{
+					"name": "/ingredientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ingredienteNombre\":\"zapallo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_for}}/ingredientes",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"ingredientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ingredientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n"
+						},
+						"url": {
+							"raw": "{{url_for}}/ingredientes",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"ingredientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ingrediente/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_for}}/ingrediente/2",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"ingrediente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ingrediente/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ingredienteNombre\":\"cebollas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_for}}/ingrediente/2",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"ingrediente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ingrediente/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_for}}/ingrediente/2",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"ingrediente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/buscar_ingrediente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_for}}/buscar_ingrediente?ingredienteNombre=a",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"buscar_ingrediente"
+							],
+							"query": [
+								{
+									"key": "ingredienteNombre",
+									"value": "a"
+								},
+								{
+									"key": "s",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "receta",
+			"item": [
+				{
+					"name": "/recetas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recetaNombre\":\"pollo al horno\",\r\n    \"recetaPorcion\":\"mediano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_for}}/recetas",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"recetas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/recetas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_for}}/recetas",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"recetas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/paginacion_receta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_for}}/paginacion_receta?page=1&perPage=5",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"paginacion_receta"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/receta/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_for}}/receta/260",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"receta",
+								"260"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "receta_ingrediente",
+			"item": [
+				{
+					"name": "/receta_ingrediente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recetas_id\": 261,\r\n    \"ingredientes_id\": [\r\n        {\r\n            \"ingrediente_id\": 1,\r\n            \"cantidad\": \"40gr\"\r\n        },\r\n        {\r\n            \"ingrediente_id\": 3,\r\n            \"cantidad\": \"100ml\"\r\n        },{\r\n            \"ingrediente_id\": 4,\r\n            \"cantidad\": \"100tasa\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_for}}/receta_ingrediente",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"receta_ingrediente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "preparacion",
+			"item": [
+				{
+					"name": "/preparaciones",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"preparacionOrden\":1,\r\n    \"preparacionDescripcion\":\"Hervir agua\",\r\n    \"recetas_id\":260\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_for}}/preparaciones",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"preparaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/preparacion/:id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url_for}}/preparacion/3",
+							"host": [
+								"{{url_for}}"
+							],
+							"path": [
+								"preparacion",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_for",
+			"value": "127.0.0.1:500"
+		}
+	]
+}
