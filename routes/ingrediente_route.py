@@ -1,4 +1,4 @@
-from controllers import *
+from controllers import IngredientesResource,IngredienteResource,BuscarIngredienteResource
 
 def registrar_ingrediente_ruta(api):
     api.add_resource(IngredientesResource,'/ingredientes')

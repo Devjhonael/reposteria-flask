@@ -1,4 +1,4 @@
-from controllers import *
+from controllers import RecetaResource,RecetasResource,RecetaPaginacionResource
 
 def registrar_receta_ruta(api):
     api.add_resource(RecetasResource,'/recetas')

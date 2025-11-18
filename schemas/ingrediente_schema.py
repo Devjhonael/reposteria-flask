@@ -1,7 +1,7 @@
 from extends import ma
 from models import IngredienteModel
 from marshmallow import fields,validate
-from utils.regex import patron_nombre
+from utils.patrones import patron_nombre
 
 class IngredienteSchema(ma.SQLAlchemyAutoSchema):
     class Meta: #para la configuracion del esquema
