@@ -1,7 +1,6 @@
 from flask import Flask
-from config import Config
+from config.config_db import Config
 from extends import db,migrate,ma,api,cors
-from flask_cors import CORS
 from flask_swagger_ui import get_swaggerui_blueprint
 
 from models import *
@@ -29,7 +28,7 @@ app.register_blueprint(swagger_blueprint)
 # origin sirve para indicar que dominion pueden acceder a mi API, x defecto * permite todos los origins 1 o muchos
 #methods=sirve para indicar que metodos pueden consultarse a la API, x defecto su valor es [GET,HEAD,POST,OPTIONS,PUT,PATH,DELETE]
 # headers = sirve para indicar que cabeceras pueden enviarse x defecto es todos las cabeceras
-CORS(app, origins= "*",methods= ["GET", "POST", "PUT", "DELETE"], 
+cors.init_app(app, origins= "*",methods= ["GET", "POST", "PUT", "DELETE"], 
         allow_headers=["Content-Type"]
     
 )  
